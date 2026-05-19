@@ -1,0 +1,7 @@
+mcp_server/.venv/
+mcp_server/.env
+agents/.env
+data/logs/*.log
+__pycache__/
+*.py[cod]
+*.egg-info/
