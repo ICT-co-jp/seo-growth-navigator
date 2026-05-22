@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-# ga4-gsc-mcp 起動スクリプト (mac/Linux)
+# ictgrowthhacker-mcp 起動スクリプト (mac/Linux)
 set -euo pipefail
 cd "$(dirname "$0")"
 
 if [ ! -x ".venv/bin/python" ]; then
-  echo "[ga4-gsc-mcp] .venv が無いので作成します..."
+  echo "[ictgrowthhacker-mcp] .venv が無いので作成します..."
   python3 -m venv .venv
 fi
 

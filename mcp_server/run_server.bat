@@ -1,6 +1,6 @@
 @echo off
 REM ----------------------------------------------------------------------
-REM ga4-gsc-mcp startup script (Windows)
+REM ictgrowthhacker-mcp startup script (Windows)
 REM Creates .venv if missing, installs dependencies, then starts server.
 REM Run: .\run_server.bat
 REM ----------------------------------------------------------------------
@@ -9,10 +9,10 @@ setlocal
 cd /d "%~dp0"
 
 if not exist ".venv\Scripts\python.exe" (
-    echo [ga4-gsc-mcp] Creating .venv...
+    echo [ictgrowthhacker-mcp] Creating .venv...
     py -3.11 -m venv .venv 2>NUL
     if errorlevel 1 (
-        echo [ga4-gsc-mcp] py -3.11 not found, retrying with python
+        echo [ictgrowthhacker-mcp] py -3.11 not found, retrying with python
         python -m venv .venv
     )
 )

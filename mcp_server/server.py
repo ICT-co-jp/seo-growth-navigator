@@ -1,8 +1,9 @@
 """
-Google Analytics 4 / Search Console MCPサーバ
+ictGrowthHacker 向け Google Analytics 4 / Search Console MCPサーバ
 
-- 認証: OAuth 2.0 (リフレッシュトークン方式)
-- シークレット: 同フォルダの .env から読み込みます
+- 認証: OAuth 2.0 デスクトップアプリ + リフレッシュトークン
+- シークレット: Windows資格情報マネージャー（keyring）に保存
+        client_secrets と oauth_token は .env ではなく keyring から読む
 - 転送方式: stdio (Claude Desktop から直接起動して使う想定)
 
 公開関数:
@@ -13,6 +14,7 @@ Google Analytics 4 / Search Console MCPサーバ
 
 from __future__ import annotations
 
+import json
 import os
 import sys
 import logging
@@ -41,26 +43,23 @@ from googleapiclient.discovery import build
 
 from mcp.server.fastmcp import FastMCP
 
+import secrets_store as ss
+
 # ---------------------------------------------------------------------------
 # 初期化
 # ---------------------------------------------------------------------------
 
-DEBUG = os.getenv("MCP_DEBUG", "0") == "1"
+DEBUG = os.getenv("ICTGROWTHHACKER_MCP_DEBUG", "0") == "1"
 logging.basicConfig(
     level=logging.DEBUG if DEBUG else logging.INFO,
     stream=sys.stderr,
-    format="[ga4-gsc-mcp] %(asctime)s %(levelname)s %(message)s",
+    format="[ictgrowthhacker-mcp] %(asctime)s %(levelname)s %(message)s",
 )
-log = logging.getLogger("ga4-gsc-mcp")
+log = logging.getLogger("ictgrowthhacker-mcp")
 
 GA4_PROPERTY_ID = os.getenv("GA4_PROPERTY_ID", "").strip()
 GSC_SITE_URL = os.getenv("GSC_SITE_URL", "").strip()
-QUOTA_PROJECT = os.getenv("GOOGLE_QUOTA_PROJECT", "").strip()
-
-CLIENT_ID = os.getenv("GOOGLE_CLIENT_ID", "").strip()
-CLIENT_SECRET = os.getenv("GOOGLE_CLIENT_SECRET", "").strip()
-REFRESH_TOKEN = os.getenv("GOOGLE_REFRESH_TOKEN", "").strip()
-TOKEN_URI = "https://oauth2.googleapis.com/token"
+QUOTA_PROJECT = os.getenv("ICTGROWTHHACKER_QUOTA_PROJECT", "").strip()
 
 SCOPES = [
     "https://www.googleapis.com/auth/analytics.readonly",
@@ -73,33 +72,32 @@ _gsc_service = None
 
 
 def _load_credentials() -> Credentials:
-    """.env から OAuth クライアント情報とリフレッシュトークンを読み、Credentials を構築する。"""
-    missing = [
-        name for name, val in (
-            ("GOOGLE_CLIENT_ID", CLIENT_ID),
-            ("GOOGLE_CLIENT_SECRET", CLIENT_SECRET),
-            ("GOOGLE_REFRESH_TOKEN", REFRESH_TOKEN),
-        ) if not val
-    ]
-    if missing:
+    """keyring から oauth_token を読み、必要なら自動更新して返す。"""
+    token_text = ss.get(ss.KEY_OAUTH_TOKEN)
+    if not token_text:
         raise RuntimeError(
-            ".env に必須項目がありません: " + ", ".join(missing) + "\n"
-            "README.md の「セットアップ手順」を参照して値を埋めてください。"
+            "keyring に oauth_token がありません。\n"
+            "先に `python secrets_setup.py import-client <client_secret.json>` と\n"
+            "`python auth_login.py` を実行してください。"
         )
+    info = json.loads(token_text)
+    creds = Credentials.from_authorized_user_info(info, SCOPES)
 
-    creds = Credentials(
-        token=None,
-        refresh_token=REFRESH_TOKEN,
-        client_id=CLIENT_ID,
-        client_secret=CLIENT_SECRET,
-        token_uri=TOKEN_URI,
-        scopes=SCOPES,
-        quota_project_id=QUOTA_PROJECT or None,
-    )
+    if QUOTA_PROJECT and getattr(creds, "quota_project_id", None) != QUOTA_PROJECT:
+        try:
+            creds = creds.with_quota_project(QUOTA_PROJECT)
+        except Exception:
+            log.debug("quota_project の差し替えに失敗 (無視)")
 
-    # 初期状態では access_token を持たないため、refresh で取得する。
-    log.info("OAuth アクセストークンを取得します")
-    creds.refresh(Request())
+    if not creds.valid:
+        if creds.expired and creds.refresh_token:
+            log.info("OAuthトークンを自動更新します")
+            creds.refresh(Request())
+            ss.put(ss.KEY_OAUTH_TOKEN, creds.to_json())
+        else:
+            raise RuntimeError(
+                "OAuthトークンが無効です。`python auth_login.py` で再認可してください。"
+            )
     return creds
 
 
@@ -163,7 +161,7 @@ def _ga4_response_to_rows(resp) -> dict[str, Any]:
 # MCP サーバ定義
 # ---------------------------------------------------------------------------
 
-mcp = FastMCP("ga4-gsc-analytics")
+mcp = FastMCP("ictgrowthhacker-analytics")
 
 
 # ===== GA4 ==================================================================
@@ -398,9 +396,10 @@ def health_check() -> dict[str, Any]:
         "ga4_property_id_set": bool(GA4_PROPERTY_ID),
         "gsc_site_url": GSC_SITE_URL or None,
         "quota_project": QUOTA_PROJECT or None,
-        "client_id_set": bool(CLIENT_ID),
-        "client_secret_set": bool(CLIENT_SECRET),
-        "refresh_token_set": bool(REFRESH_TOKEN),
+        "keyring_service": ss.service_name(),
+        "keyring_backend": ss.backend_name(),
+        "client_secrets_in_keyring": bool(ss.get(ss.KEY_CLIENT_SECRETS)),
+        "oauth_token_in_keyring": bool(ss.get(ss.KEY_OAUTH_TOKEN)),
         "ga4_ok": False,
         "gsc_ok": False,
     }
@@ -425,8 +424,10 @@ def health_check() -> dict[str, Any]:
 
 if __name__ == "__main__":
     log.info(
-        "ga4-gsc-mcp 起動: GA4_PROPERTY_ID=%s, GSC_SITE_URL=%s",
+        "ictgrowthhacker-mcp 起動: GA4_PROPERTY_ID=%s, GSC_SITE_URL=%s, keyring=%s/%s",
         GA4_PROPERTY_ID or "(未設定)",
         GSC_SITE_URL or "(未設定)",
+        ss.service_name(),
+        ss.backend_name(),
     )
     mcp.run()

@@ -1,31 +1,31 @@
 """
-任意サイトの sitemap (index 含む) を辿って URL 一覧を CSV に書き出すユーティリティ。
+対象サイトの sitemap (index 含む) を辿って URL一覧を CSV に書き出すユーティリティ。
 
 特徴:
-- sitemap.xml と子 sitemap ファイルのみを取得する。記事本体 URL は取得しない。
+- sitemap.xml と子sitemapファイルのみを取得する。記事本体URLは取得しない。
 - リクエスト間にディレイを挟む（既定 1.0 秒）。
-- 子 sitemap 取得本数と URL 総数に上限を設けて事故を防ぐ。
+- 子sitemap取得本数とURL総数に上限を設けて事故を防ぐ。
 - dry-run で sitemap 一覧だけ確認できる。
-- 同一 URL は最後の lastmod を残して重複排除し、url 列でソート。
+- 同一URLは最後の lastmod を残して重複排除し、url 列でソート。
 
 使い方:
     python sitemap_to_csv.py SITEMAP_URL OUTPUT_CSV [options]
 
 例:
-    # 標準実行（既定: 1 秒間隔、子 sitemap 最大 200 本）
+    # 標準実行（既定: 1秒間隔、子sitemap最大200本）
     python sitemap_to_csv.py https://example.com/sitemap.xml ../data/url_inventory.csv
 
-    # 速めに走らせる（リクエスト間 0.3 秒）
+    # 速めに走らせる（リクエスト間 0.3秒）
     python sitemap_to_csv.py https://example.com/sitemap.xml ../data/url_inventory.csv --delay 0.3
 
-    # サイズ感だけ把握（fetch するのは index と最初の子 sitemap だけ）
+    # サイズ感だけ把握（fetchするのはindexと最初の子sitemapだけ）
     python sitemap_to_csv.py https://example.com/sitemap.xml /tmp/x.csv --dry-run
 
-    # 大量 URL が懸念される場合は上限を効かせる
+    # 大量URLが懸念される場合は上限を効かせる
     python sitemap_to_csv.py https://example.com/sitemap.xml ../data/url_inventory.csv --max-urls 5000
 
-このスクリプトは MCP サーバではなく、棚卸しの入口として手動で叩く想定。
-取得後は GA4 / GSC データと url 列でジョインして「読まれている／読まれていない」を判別する。
+このスクリプトは MCPサーバではなく、棚卸しの入口として手動で叩く想定。
+取得後は GA4/GSC データと url 列でジョインして「読まれている／読まれていない」を判別する。
 """
 from __future__ import annotations
 
@@ -38,7 +38,7 @@ from xml.etree import ElementTree as ET
 
 NS = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
 
-USER_AGENT = "ga4-gsc-mcp-sitemap/1.0"
+USER_AGENT = "ictgrowthhacker-mcp-sitemap/1.0 (+ictGrowthHacker growth ops)"
 
 
 def fetch(url: str, timeout: float = 30.0) -> bytes:
@@ -141,7 +141,7 @@ def write_csv(rows: list[dict[str, str]], out_path: str) -> int:
 
 
 def main() -> int:
-    p = argparse.ArgumentParser(description="sitemap ダンプユーティリティ")
+    p = argparse.ArgumentParser(description="対象サイトの sitemap ダンプ")
     p.add_argument("sitemap_url", help="入口 sitemap.xml の URL")
     p.add_argument("output_csv", help="出力CSVパス")
     p.add_argument(

@@ -1,0 +1,928 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#wp--skip-link--target"
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - figure [ref=e5]:
+        - link "WordPress.org" [ref=e6] [cursor=pointer]:
+          - /url: https://wordpress.org/
+          - img "WordPress.org" [ref=e7]
+      - navigation "Main" [ref=e10]:
+        - list "Main" [ref=e15]:
+          - listitem [ref=e16]:
+            - link "Showcase" [ref=e17] [cursor=pointer]:
+              - /url: https://wordpress.org/showcase/
+          - listitem [ref=e18]:
+            - link "Plugins" [ref=e19] [cursor=pointer]:
+              - /url: https://wordpress.org/plugins/
+          - listitem [ref=e20]:
+            - link "Themes" [ref=e21] [cursor=pointer]:
+              - /url: https://wordpress.org/themes/
+          - listitem [ref=e22]:
+            - link "Hosting" [ref=e23] [cursor=pointer]:
+              - /url: https://wordpress.org/hosting/
+          - listitem [ref=e24]:
+            - link "News" [ref=e25] [cursor=pointer]:
+              - /url: https://wordpress.org/news/
+          - listitem [ref=e26]:
+            - button "Resources submenu" [ref=e27] [cursor=pointer]: Resources
+          - listitem [ref=e28]:
+            - button "About submenu" [ref=e29] [cursor=pointer]: About
+      - navigation "Search" [ref=e30]:
+        - button "Open Search" [ref=e31] [cursor=pointer]
+      - link "Get WordPress" [ref=e33] [cursor=pointer]:
+        - /url: https://wordpress.org/download/
+    - navigation "Section" [ref=e36]:
+      - list "Section" [ref=e41]:
+        - listitem [ref=e42]:
+          - link "Submit a plugin" [ref=e43] [cursor=pointer]:
+            - /url: https://wordpress.org/plugins/developers/
+        - listitem [ref=e44]:
+          - text: •
+          - link "My favorites" [ref=e45] [cursor=pointer]:
+            - /url: https://wordpress.org/plugins/browse/favorites/
+        - listitem [ref=e46]:
+          - link "Log in" [ref=e47] [cursor=pointer]:
+            - /url: https://login.wordpress.org/?redirect_to=https%3A%2F%2Fwordpress.org%2Fplugins&locale=en_US
+    - generic [ref=e49]:
+      - heading "Plugins" [level=1] [ref=e50]
+      - paragraph [ref=e51]: Extend your WordPress experience! Browse over 63,000 free plugins.
+    - main [ref=e52]:
+      - generic [ref=e54]:
+        - generic [ref=e56]:
+          - search [ref=e60]:
+            - generic [ref=e61]: Search
+            - generic [ref=e62]:
+              - searchbox "Search" [ref=e63]
+              - button "Search plugins" [ref=e64] [cursor=pointer]:
+                - img [ref=e65]
+          - navigation "Category menu" [ref=e67]:
+            - list "Category menu" [ref=e68]:
+              - listitem [ref=e69]:
+                - link "All" [ref=e70] [cursor=pointer]:
+                  - /url: https://wordpress.org/plugins/
+              - listitem [ref=e71]:
+                - link "Community" [ref=e72] [cursor=pointer]:
+                  - /url: https://wordpress.org/plugins/?plugin_business_model=community
+              - listitem [ref=e73]:
+                - link "Commercial" [ref=e74] [cursor=pointer]:
+                  - /url: https://wordpress.org/plugins/?plugin_business_model=commercial
+        - main [ref=e75]:
+          - generic [ref=e76]:
+            - generic [ref=e77]:
+              - heading "Featured plugins" [level=2] [ref=e78]
+              - link "See all Featured plugins" [ref=e79] [cursor=pointer]:
+                - /url: https://wordpress.org/plugins/browse/featured/
+                - text: See all
+                - generic [ref=e80]: Featured plugins
+            - list [ref=e82] [cursor=pointer]:
+              - listitem [ref=e83]:
+                - generic [ref=e84]:
+                  - generic [ref=e85]:
+                    - heading "GT Table Block" [level=3] [ref=e88]:
+                      - link "GT Table Block" [ref=e89]:
+                        - /url: https://wordpress.org/plugins/gt-table-block/
+                    - generic [ref=e90]:
+                      - generic "0 out of 5 stars" [ref=e91]:
+                        - generic [ref=e92]: 
+                        - generic [ref=e93]: 
+                        - generic [ref=e94]: 
+                        - generic [ref=e95]: 
+                        - generic [ref=e96]: 
+                      - generic [ref=e97]:
+                        - text: (0
+                        - generic [ref=e98]: total ratings
+                        - text: )
+                    - paragraph [ref=e100]: Sticky header and styled first column for the core Table block, delivered as an opt-in block variation that leaves existing tables untouched.
+                  - generic [ref=e101]:
+                    - generic [ref=e102]:
+                      - img [ref=e103]
+                      - generic [ref=e105]: Birgit Pauli-Haack
+                    - generic [ref=e106]:
+                      - img [ref=e107]
+                      - generic [ref=e109]: 100+ active installations
+                    - generic [ref=e110]:
+                      - img [ref=e111]
+                      - generic [ref=e113]: Tested with 6.9.4
+              - listitem [ref=e114]:
+                - generic [ref=e115]:
+                  - generic [ref=e116]:
+                    - heading "Noted Visual Feedback" [level=3] [ref=e119]:
+                      - link "Noted Visual Feedback" [ref=e120]:
+                        - /url: https://wordpress.org/plugins/noted-visual-feedback/
+                    - generic [ref=e121]:
+                      - generic "3.5 out of 5 stars" [ref=e122]:
+                        - generic [ref=e123]: 
+                        - generic [ref=e124]: 
+                        - generic [ref=e125]: 
+                        - generic [ref=e126]: 
+                        - generic [ref=e127]: 
+                      - generic [ref=e128]:
+                        - text: (2
+                        - generic [ref=e129]: total ratings
+                        - text: )
+                    - paragraph [ref=e131]: Collect visual feedback with pinned comments directly on your live WordPress site. All data stored locally in your WordPress database.
+                  - generic [ref=e132]:
+                    - generic [ref=e133]:
+                      - img [ref=e134]
+                      - generic [ref=e136]: Mountain Thirteen Media
+                    - generic [ref=e137]:
+                      - img [ref=e138]
+                      - generic [ref=e140]: 80+ active installations
+                    - generic [ref=e141]:
+                      - img [ref=e142]
+                      - generic [ref=e144]: Tested with 6.9.4
+              - listitem [ref=e145]:
+                - generic [ref=e146]:
+                  - generic [ref=e147]:
+                    - heading "Flavor – Restaurant Menu" [level=3] [ref=e150]:
+                      - link "Flavor – Restaurant Menu" [ref=e151]:
+                        - /url: https://wordpress.org/plugins/flavor-restaurant-menu/
+                    - generic [ref=e152]:
+                      - generic "5 out of 5 stars" [ref=e153]:
+                        - generic [ref=e154]: 
+                        - generic [ref=e155]: 
+                        - generic [ref=e156]: 
+                        - generic [ref=e157]: 
+                        - generic [ref=e158]: 
+                      - generic [ref=e159]:
+                        - text: (1
+                        - generic [ref=e160]: total ratings
+                        - text: )
+                    - paragraph [ref=e162]: A modern, elegant restaurant menu plugin. Card Grid layout, category filter, Elegant Dark theme, all page builders included.
+                  - generic [ref=e163]:
+                    - generic [ref=e164]:
+                      - img [ref=e165]
+                      - generic [ref=e167]: flavorstudio
+                    - generic [ref=e168]:
+                      - img [ref=e169]
+                      - generic [ref=e171]: 90+ active installations
+                    - generic [ref=e172]:
+                      - img [ref=e173]
+                      - generic [ref=e175]: Tested with 7.0
+              - listitem [ref=e176]:
+                - generic [ref=e177]:
+                  - generic [ref=e178]:
+                    - heading "GuestDock" [level=3] [ref=e181]:
+                      - link "GuestDock" [ref=e182]:
+                        - /url: https://wordpress.org/plugins/guestdock/
+                    - generic [ref=e183]:
+                      - generic "0 out of 5 stars" [ref=e184]:
+                        - generic [ref=e185]: 
+                        - generic [ref=e186]: 
+                        - generic [ref=e187]: 
+                        - generic [ref=e188]: 
+                        - generic [ref=e189]: 
+                      - generic [ref=e190]:
+                        - text: (0
+                        - generic [ref=e191]: total ratings
+                        - text: )
+                    - paragraph [ref=e193]: GuestDock is a secure, isolated guest authoring system for WordPress. Invite contributors with time-limited access and strict sandboxing.
+                  - generic [ref=e194]:
+                    - generic [ref=e195]:
+                      - img [ref=e196]
+                      - generic [ref=e198]: RAKIBUZZAMAN
+                    - generic [ref=e199]:
+                      - img [ref=e200]
+                      - generic [ref=e202]: 70+ active installations
+                    - generic [ref=e203]:
+                      - img [ref=e204]
+                      - generic [ref=e206]: Tested with 6.9.4
+              - listitem [ref=e207]:
+                - generic [ref=e208]:
+                  - generic [ref=e209]:
+                    - heading "16Deza Table Cell Extras" [level=3] [ref=e212]:
+                      - link "16Deza Table Cell Extras" [ref=e213]:
+                        - /url: https://wordpress.org/plugins/16deza-table-cell-extras/
+                    - generic [ref=e214]:
+                      - generic "0 out of 5 stars" [ref=e215]:
+                        - generic [ref=e216]: 
+                        - generic [ref=e217]: 
+                        - generic [ref=e218]: 
+                        - generic [ref=e219]: 
+                        - generic [ref=e220]: 
+                      - generic [ref=e221]:
+                        - text: (0
+                        - generic [ref=e222]: total ratings
+                        - text: )
+                    - paragraph [ref=e224]: Extends Gutenberg's standard table block cells with inline formatting options.
+                  - generic [ref=e225]:
+                    - generic [ref=e226]:
+                      - img [ref=e227]
+                      - generic [ref=e229]: JuuRokuDezain
+                    - generic [ref=e230]:
+                      - img [ref=e231]
+                      - generic [ref=e233]: 70+ active installations
+                    - generic [ref=e234]:
+                      - img [ref=e235]
+                      - generic [ref=e237]: Tested with 7.0
+              - listitem [ref=e238]:
+                - generic [ref=e239]:
+                  - generic [ref=e240]:
+                    - heading "IndieTech Popup Builder" [level=3] [ref=e243]:
+                      - link "IndieTech Popup Builder" [ref=e244]:
+                        - /url: https://wordpress.org/plugins/indietech-popup-builder/
+                    - generic [ref=e245]:
+                      - generic "0 out of 5 stars" [ref=e246]:
+                        - generic [ref=e247]: 
+                        - generic [ref=e248]: 
+                        - generic [ref=e249]: 
+                        - generic [ref=e250]: 
+                        - generic [ref=e251]: 
+                      - generic [ref=e252]:
+                        - text: (0
+                        - generic [ref=e253]: total ratings
+                        - text: )
+                    - paragraph [ref=e255]: A powerful popup plugin with Gutenberg editor support and advanced targeting options.
+                  - generic [ref=e256]:
+                    - generic [ref=e257]:
+                      - img [ref=e258]
+                      - generic [ref=e260]: IndieTech Solutions
+                    - generic [ref=e261]:
+                      - img [ref=e262]
+                      - generic [ref=e264]: 100+ active installations
+                    - generic [ref=e265]:
+                      - img [ref=e266]
+                      - generic [ref=e268]: Tested with 7.0
+          - generic [ref=e269]:
+            - generic [ref=e270]:
+              - heading "Beta plugins" [level=2] [ref=e271]
+              - link "See all Beta plugins" [ref=e272] [cursor=pointer]:
+                - /url: https://wordpress.org/plugins/browse/beta/
+                - text: See all
+                - generic [ref=e273]: Beta plugins
+            - list [ref=e275] [cursor=pointer]:
+              - listitem [ref=e276]:
+                - generic [ref=e277]:
+                  - generic [ref=e278]:
+                    - heading "Gutenberg" [level=3] [ref=e281]:
+                      - link "Gutenberg" [ref=e282]:
+                        - /url: https://wordpress.org/plugins/gutenberg/
+                    - generic [ref=e283]:
+                      - generic "2 out of 5 stars" [ref=e284]:
+                        - generic [ref=e285]: 
+                        - generic [ref=e286]: 
+                        - generic [ref=e287]: 
+                        - generic [ref=e288]: 
+                        - generic [ref=e289]: 
+                      - generic [ref=e290]:
+                        - text: (3,871
+                        - generic [ref=e291]: total ratings
+                        - text: )
+                    - paragraph [ref=e293]: The Gutenberg plugin adds editing, customization, and site building to WordPress. Use it to test beta features before their official release.
+                  - generic [ref=e294]:
+                    - generic [ref=e295]:
+                      - img [ref=e296]
+                      - generic [ref=e298]: WordPress.org
+                    - generic [ref=e299]:
+                      - img [ref=e300]
+                      - generic [ref=e302]: 300,000+ active installations
+                    - generic [ref=e303]:
+                      - img [ref=e304]
+                      - generic [ref=e306]: Tested with 6.9.4
+              - listitem [ref=e307]:
+                - generic [ref=e308]:
+                  - generic [ref=e309]:
+                    - heading "AI" [level=3] [ref=e312]:
+                      - link "AI" [ref=e313]:
+                        - /url: https://wordpress.org/plugins/ai/
+                    - generic [ref=e314]:
+                      - generic "5 out of 5 stars" [ref=e315]:
+                        - generic [ref=e316]: 
+                        - generic [ref=e317]: 
+                        - generic [ref=e318]: 
+                        - generic [ref=e319]: 
+                        - generic [ref=e320]: 
+                      - generic [ref=e321]:
+                        - text: (4
+                        - generic [ref=e322]: total ratings
+                        - text: )
+                    - paragraph [ref=e324]: AI features, experiments and capabilities for WordPress.
+                  - generic [ref=e325]:
+                    - generic [ref=e326]:
+                      - img [ref=e327]
+                      - generic [ref=e329]: WordPress.org
+                    - generic [ref=e330]:
+                      - img [ref=e331]
+                      - generic [ref=e333]: 2,000+ active installations
+                    - generic [ref=e334]:
+                      - img [ref=e335]
+                      - generic [ref=e337]: Tested with 7.0
+              - listitem [ref=e338]:
+                - generic [ref=e339]:
+                  - generic [ref=e340]:
+                    - heading "Two Factor" [level=3] [ref=e343]:
+                      - link "Two Factor" [ref=e344]:
+                        - /url: https://wordpress.org/plugins/two-factor/
+                    - generic [ref=e345]:
+                      - generic "5 out of 5 stars" [ref=e346]:
+                        - generic [ref=e347]: 
+                        - generic [ref=e348]: 
+                        - generic [ref=e349]: 
+                        - generic [ref=e350]: 
+                        - generic [ref=e351]: 
+                      - generic [ref=e352]:
+                        - text: (206
+                        - generic [ref=e353]: total ratings
+                        - text: )
+                    - paragraph [ref=e355]: Enable Two-Factor Authentication (2FA) using time-based one-time passwords (TOTP), email, and backup verification codes.
+                  - generic [ref=e356]:
+                    - generic [ref=e357]:
+                      - img [ref=e358]
+                      - generic [ref=e360]: WordPress.org
+                    - generic [ref=e361]:
+                      - img [ref=e362]
+                      - generic [ref=e364]: 100,000+ active installations
+                    - generic [ref=e365]:
+                      - img [ref=e366]
+                      - generic [ref=e368]: Tested with 6.9.4
+              - listitem [ref=e369]:
+                - generic [ref=e370]:
+                  - generic [ref=e371]:
+                    - heading "Performance Lab" [level=3] [ref=e374]:
+                      - link "Performance Lab" [ref=e375]:
+                        - /url: https://wordpress.org/plugins/performance-lab/
+                    - generic [ref=e376]:
+                      - generic "4.5 out of 5 stars" [ref=e377]:
+                        - generic [ref=e378]: 
+                        - generic [ref=e379]: 
+                        - generic [ref=e380]: 
+                        - generic [ref=e381]: 
+                        - generic [ref=e382]: 
+                      - generic [ref=e383]:
+                        - text: (50
+                        - generic [ref=e384]: total ratings
+                        - text: )
+                    - paragraph [ref=e386]: Performance plugin from the WordPress Performance Team, which is a collection of standalone performance features.
+                  - generic [ref=e387]:
+                    - generic [ref=e388]:
+                      - img [ref=e389]
+                      - generic [ref=e391]: WordPress Performance Team
+                    - generic [ref=e392]:
+                      - img [ref=e393]
+                      - generic [ref=e395]: 200,000+ active installations
+                    - generic [ref=e396]:
+                      - img [ref=e397]
+                      - generic [ref=e399]: Tested with 7.0
+              - listitem [ref=e400]:
+                - generic [ref=e401]:
+                  - generic [ref=e402]:
+                    - heading "Test jQuery Updates" [level=3] [ref=e405]:
+                      - link "Test jQuery Updates" [ref=e406]:
+                        - /url: https://wordpress.org/plugins/wp-jquery-update-test/
+                    - generic [ref=e407]:
+                      - generic "4.5 out of 5 stars" [ref=e408]:
+                        - generic [ref=e409]: 
+                        - generic [ref=e410]: 
+                        - generic [ref=e411]: 
+                        - generic [ref=e412]: 
+                        - generic [ref=e413]: 
+                      - generic [ref=e414]:
+                        - text: (7
+                        - generic [ref=e415]: total ratings
+                        - text: )
+                    - paragraph [ref=e417]: Test different versions of jQuery.
+                  - generic [ref=e418]:
+                    - generic [ref=e419]:
+                      - img [ref=e420]
+                      - generic [ref=e422]: Andrew Ozz
+                    - generic [ref=e423]:
+                      - img [ref=e424]
+                      - generic [ref=e426]: 1,000+ active installations
+                    - generic [ref=e427]:
+                      - img [ref=e428]
+                      - generic [ref=e430]: Tested with 6.9.4
+              - listitem [ref=e431]:
+                - generic [ref=e432]:
+                  - generic [ref=e433]:
+                    - heading "Performant Translations" [level=3] [ref=e436]:
+                      - link "Performant Translations" [ref=e437]:
+                        - /url: https://wordpress.org/plugins/performant-translations/
+                    - generic [ref=e438]:
+                      - generic "5 out of 5 stars" [ref=e439]:
+                        - generic [ref=e440]: 
+                        - generic [ref=e441]: 
+                        - generic [ref=e442]: 
+                        - generic [ref=e443]: 
+                        - generic [ref=e444]: 
+                      - generic [ref=e445]:
+                        - text: (16
+                        - generic [ref=e446]: total ratings
+                        - text: )
+                    - paragraph [ref=e448]: Making internationalization/localization in WordPress faster than ever before.
+                  - generic [ref=e449]:
+                    - generic [ref=e450]:
+                      - img [ref=e451]
+                      - generic [ref=e453]: Pascal Birchler
+                    - generic [ref=e454]:
+                      - img [ref=e455]
+                      - generic [ref=e457]: 40,000+ active installations
+                    - generic [ref=e458]:
+                      - img [ref=e459]
+                      - generic [ref=e461]: Tested with 6.9.4
+          - generic [ref=e462]:
+            - generic [ref=e463]:
+              - heading "Popular plugins" [level=2] [ref=e464]
+              - link "See all Popular plugins" [ref=e465] [cursor=pointer]:
+                - /url: https://wordpress.org/plugins/browse/popular/
+                - text: See all
+                - generic [ref=e466]: Popular plugins
+            - list [ref=e468] [cursor=pointer]:
+              - listitem [ref=e469]:
+                - generic [ref=e470]:
+                  - generic [ref=e471]:
+                    - heading "Elementor Website Builder – more than just a page builder" [level=3] [ref=e474]:
+                      - link "Elementor Website Builder – more than just a page builder" [ref=e475]:
+                        - /url: https://wordpress.org/plugins/elementor/
+                    - generic [ref=e476]:
+                      - generic "4.5 out of 5 stars" [ref=e477]:
+                        - generic [ref=e478]: 
+                        - generic [ref=e479]: 
+                        - generic [ref=e480]: 
+                        - generic [ref=e481]: 
+                        - generic [ref=e482]: 
+                      - generic [ref=e483]:
+                        - text: (7,249
+                        - generic [ref=e484]: total ratings
+                        - text: )
+                    - paragraph [ref=e486]: "The Elementor Website Builder has it all: drag and drop page builder, Atomic Editor, pixel perfect design, global and reusable style systems, mobile r …"
+                  - generic [ref=e487]:
+                    - generic [ref=e488]:
+                      - img [ref=e489]
+                      - generic [ref=e491]: Elementor
+                    - generic [ref=e492]:
+                      - img [ref=e493]
+                      - generic [ref=e495]: 10+ million active installations
+                    - generic [ref=e496]:
+                      - img [ref=e497]
+                      - generic [ref=e499]: Tested with 7.0
+              - listitem [ref=e500]:
+                - generic [ref=e501]:
+                  - generic [ref=e502]:
+                    - heading "Yoast SEO – Advanced SEO with real-time guidance and built-in AI" [level=3] [ref=e505]:
+                      - link "Yoast SEO – Advanced SEO with real-time guidance and built-in AI" [ref=e506]:
+                        - /url: https://wordpress.org/plugins/wordpress-seo/
+                    - generic [ref=e507]:
+                      - generic "5 out of 5 stars" [ref=e508]:
+                        - generic [ref=e509]: 
+                        - generic [ref=e510]: 
+                        - generic [ref=e511]: 
+                        - generic [ref=e512]: 
+                        - generic [ref=e513]: 
+                      - generic [ref=e514]:
+                        - text: (27,810
+                        - generic [ref=e515]: total ratings
+                        - text: )
+                    - paragraph [ref=e517]: Improve your SEO with real-time feedback, schema, and clear guidance. Upgrade for AI tools, Google Docs integration, and 24/7 support, no hidden fees.
+                  - generic [ref=e518]:
+                    - generic [ref=e519]:
+                      - img [ref=e520]
+                      - generic [ref=e522]: Yoast
+                    - generic [ref=e523]:
+                      - img [ref=e524]
+                      - generic [ref=e526]: 10+ million active installations
+                    - generic [ref=e527]:
+                      - img [ref=e528]
+                      - generic [ref=e530]: Tested with 7.0
+              - listitem [ref=e531]:
+                - generic [ref=e532]:
+                  - generic [ref=e533]:
+                    - heading "Contact Form 7" [level=3] [ref=e536]:
+                      - link "Contact Form 7" [ref=e537]:
+                        - /url: https://wordpress.org/plugins/contact-form-7/
+                    - generic [ref=e538]:
+                      - generic "4 out of 5 stars" [ref=e539]:
+                        - generic [ref=e540]: 
+                        - generic [ref=e541]: 
+                        - generic [ref=e542]: 
+                        - generic [ref=e543]: 
+                        - generic [ref=e544]: 
+                      - generic [ref=e545]:
+                        - text: (2,174
+                        - generic [ref=e546]: total ratings
+                        - text: )
+                    - paragraph [ref=e548]: Just another contact form plugin. Simple but flexible.
+                  - generic [ref=e549]:
+                    - generic [ref=e550]:
+                      - img [ref=e551]
+                      - generic [ref=e553]: Rock Lobster Inc.
+                    - generic [ref=e554]:
+                      - img [ref=e555]
+                      - generic [ref=e557]: 10+ million active installations
+                    - generic [ref=e558]:
+                      - img [ref=e559]
+                      - generic [ref=e561]: Tested with 7.0
+              - listitem [ref=e562]:
+                - generic [ref=e563]:
+                  - generic [ref=e564]:
+                    - heading "Classic Editor" [level=3] [ref=e567]:
+                      - link "Classic Editor" [ref=e568]:
+                        - /url: https://wordpress.org/plugins/classic-editor/
+                    - generic [ref=e569]:
+                      - generic "5 out of 5 stars" [ref=e570]:
+                        - generic [ref=e571]: 
+                        - generic [ref=e572]: 
+                        - generic [ref=e573]: 
+                        - generic [ref=e574]: 
+                        - generic [ref=e575]: 
+                      - generic [ref=e576]:
+                        - text: (1,240
+                        - generic [ref=e577]: total ratings
+                        - text: )
+                    - paragraph [ref=e579]: Enables the previous "classic" editor and the old-style Edit Post screen with TinyMCE, Meta Boxes, etc. Supports all plugins that extend this screen.
+                  - generic [ref=e580]:
+                    - generic [ref=e581]:
+                      - img [ref=e582]
+                      - generic [ref=e584]: WordPress.org
+                    - generic [ref=e585]:
+                      - img [ref=e586]
+                      - generic [ref=e588]: 9+ million active installations
+                    - generic [ref=e589]:
+                      - img [ref=e590]
+                      - generic [ref=e592]: Tested with 6.9.4
+              - listitem [ref=e593]:
+                - generic [ref=e594]:
+                  - generic [ref=e595]:
+                    - heading "LiteSpeed Cache" [level=3] [ref=e598]:
+                      - link "LiteSpeed Cache" [ref=e599]:
+                        - /url: https://wordpress.org/plugins/litespeed-cache/
+                    - generic [ref=e600]:
+                      - generic "5 out of 5 stars" [ref=e601]:
+                        - generic [ref=e602]: 
+                        - generic [ref=e603]: 
+                        - generic [ref=e604]: 
+                        - generic [ref=e605]: 
+                        - generic [ref=e606]: 
+                      - generic [ref=e607]:
+                        - text: (2,750
+                        - generic [ref=e608]: total ratings
+                        - text: )
+                    - paragraph [ref=e610]: "All-in-one unbeatable acceleration & PageSpeed improvement: caching, image/CSS/JS optimization…"
+                  - generic [ref=e611]:
+                    - generic [ref=e612]:
+                      - img [ref=e613]
+                      - generic [ref=e615]: LiteSpeed Technologies
+                    - generic [ref=e616]:
+                      - img [ref=e617]
+                      - generic [ref=e619]: 7+ million active installations
+                    - generic [ref=e620]:
+                      - img [ref=e621]
+                      - generic [ref=e623]: Tested with 6.9.4
+              - listitem [ref=e624]:
+                - generic [ref=e625]:
+                  - generic [ref=e626]:
+                    - heading "WooCommerce" [level=3] [ref=e629]:
+                      - link "WooCommerce" [ref=e630]:
+                        - /url: https://wordpress.org/plugins/woocommerce/
+                    - generic [ref=e631]:
+                      - generic "4.5 out of 5 stars" [ref=e632]:
+                        - generic [ref=e633]: 
+                        - generic [ref=e634]: 
+                        - generic [ref=e635]: 
+                        - generic [ref=e636]: 
+                        - generic [ref=e637]: 
+                      - generic [ref=e638]:
+                        - text: (4,794
+                        - generic [ref=e639]: total ratings
+                        - text: )
+                    - paragraph [ref=e641]: Everything you need to launch an online store in days and keep it growing for years. From your first sale to millions in revenue, Woo is with you.
+                  - generic [ref=e642]:
+                    - generic [ref=e643]:
+                      - img [ref=e644]
+                      - generic [ref=e646]: Automattic
+                    - generic [ref=e647]:
+                      - img [ref=e648]
+                      - generic [ref=e650]: 7+ million active installations
+                    - generic [ref=e651]:
+                      - img [ref=e652]
+                      - generic [ref=e654]: Tested with 6.9.4
+          - generic [ref=e655]:
+            - generic [ref=e656]:
+              - heading "Block-Enabled plugins" [level=2] [ref=e657]
+              - link "See all Block-Enabled plugins" [ref=e658] [cursor=pointer]:
+                - /url: https://wordpress.org/plugins/browse/blocks/
+                - text: See all
+                - generic [ref=e659]: Block-Enabled plugins
+            - list [ref=e661] [cursor=pointer]:
+              - listitem [ref=e662]:
+                - generic [ref=e663]:
+                  - generic [ref=e664]:
+                    - heading "Formidable Forms – Contact Form Plugin, Survey, Quiz, Payment, Calculator Form & Custom Form Builder" [level=3] [ref=e667]:
+                      - link "Formidable Forms – Contact Form Plugin, Survey, Quiz, Payment, Calculator Form & Custom Form Builder" [ref=e668]:
+                        - /url: https://wordpress.org/plugins/formidable/
+                    - generic [ref=e669]:
+                      - generic "5 out of 5 stars" [ref=e670]:
+                        - generic [ref=e671]: 
+                        - generic [ref=e672]: 
+                        - generic [ref=e673]: 
+                        - generic [ref=e674]: 
+                        - generic [ref=e675]: 
+                      - generic [ref=e676]:
+                        - text: (1,365
+                        - generic [ref=e677]: total ratings
+                        - text: )
+                    - paragraph [ref=e679]: The most advanced WordPress forms plugin. Go beyond contact forms with our drag and drop form builder for surveys, quizzes, and more.
+                  - generic [ref=e680]:
+                    - generic [ref=e681]:
+                      - img [ref=e682]
+                      - generic [ref=e684]: Strategy11 Team
+                    - generic [ref=e685]:
+                      - img [ref=e686]
+                      - generic [ref=e688]: 300,000+ active installations
+                    - generic [ref=e689]:
+                      - img [ref=e690]
+                      - generic [ref=e692]: Tested with 6.9.4
+              - listitem [ref=e693]:
+                - generic [ref=e694]:
+                  - generic [ref=e695]:
+                    - heading "Event Espresso – Event Registration & Ticketing Sales" [level=3] [ref=e698]:
+                      - link "Event Espresso – Event Registration & Ticketing Sales" [ref=e699]:
+                        - /url: https://wordpress.org/plugins/event-espresso-decaf/
+                    - generic [ref=e700]:
+                      - generic "4.5 out of 5 stars" [ref=e701]:
+                        - generic [ref=e702]: 
+                        - generic [ref=e703]: 
+                        - generic [ref=e704]: 
+                        - generic [ref=e705]: 
+                        - generic [ref=e706]: 
+                      - generic [ref=e707]:
+                        - text: (134
+                        - generic [ref=e708]: total ratings
+                        - text: )
+                    - paragraph [ref=e710]: The best events plugin with event registration, free and paid ticket sales, event registration forms, PayPal payments, automatic emails, and more!
+                  - generic [ref=e711]:
+                    - generic [ref=e712]:
+                      - img [ref=e713]
+                      - generic [ref=e715]: Event Espresso
+                    - generic [ref=e716]:
+                      - img [ref=e717]
+                      - generic [ref=e719]: 600+ active installations
+                    - generic [ref=e720]:
+                      - img [ref=e721]
+                      - generic [ref=e723]: Tested with 6.9.4
+              - listitem [ref=e724]:
+                - generic [ref=e725]:
+                  - generic [ref=e726]:
+                    - heading "Simple Google Calendar Outlook Events Widget" [level=3] [ref=e729]:
+                      - link "Simple Google Calendar Outlook Events Widget" [ref=e730]:
+                        - /url: https://wordpress.org/plugins/simple-google-icalendar-widget/
+                    - generic [ref=e731]:
+                      - generic "5 out of 5 stars" [ref=e732]:
+                        - generic [ref=e733]: 
+                        - generic [ref=e734]: 
+                        - generic [ref=e735]: 
+                        - generic [ref=e736]: 
+                        - generic [ref=e737]: 
+                      - generic [ref=e738]:
+                        - text: (6
+                        - generic [ref=e739]: total ratings
+                        - text: )
+                    - paragraph [ref=e741]: Block widget that displays events from a public google calendar or iCal file.
+                  - generic [ref=e742]:
+                    - generic [ref=e743]:
+                      - img [ref=e744]
+                      - generic [ref=e746]: bramwaas
+                    - generic [ref=e747]:
+                      - img [ref=e748]
+                      - generic [ref=e750]: 1,000+ active installations
+                    - generic [ref=e751]:
+                      - img [ref=e752]
+                      - generic [ref=e754]: Tested with 6.9.4
+              - listitem [ref=e755]:
+                - generic [ref=e756]:
+                  - generic [ref=e757]:
+                    - heading "eCommerce Product Catalog Plugin for WordPress" [level=3] [ref=e760]:
+                      - link "eCommerce Product Catalog Plugin for WordPress" [ref=e761]:
+                        - /url: https://wordpress.org/plugins/ecommerce-product-catalog/
+                    - generic [ref=e762]:
+                      - generic "4.5 out of 5 stars" [ref=e763]:
+                        - generic [ref=e764]: 
+                        - generic [ref=e765]: 
+                        - generic [ref=e766]: 
+                        - generic [ref=e767]: 
+                        - generic [ref=e768]: 
+                      - generic [ref=e769]:
+                        - text: (268
+                        - generic [ref=e770]: total ratings
+                        - text: )
+                    - paragraph [ref=e772]: eCommerce Product Catalog is a powerful and free plugin to sell with a beautiful eCommerce or request for a quote WordPress website.
+                  - generic [ref=e773]:
+                    - generic [ref=e774]:
+                      - img [ref=e775]
+                      - generic [ref=e777]: impleCode
+                    - generic [ref=e778]:
+                      - img [ref=e779]
+                      - generic [ref=e781]: 7,000+ active installations
+                    - generic [ref=e782]:
+                      - img [ref=e783]
+                      - generic [ref=e785]: Tested with 7.0
+              - listitem [ref=e786]:
+                - generic [ref=e787]:
+                  - generic [ref=e788]:
+                    - heading "Animated Live Wall Gallery" [level=3] [ref=e791]:
+                      - link "Animated Live Wall Gallery" [ref=e792]:
+                        - /url: https://wordpress.org/plugins/animated-live-wall/
+                    - generic [ref=e793]:
+                      - generic "4.5 out of 5 stars" [ref=e794]:
+                        - generic [ref=e795]: 
+                        - generic [ref=e796]: 
+                        - generic [ref=e797]: 
+                        - generic [ref=e798]: 
+                        - generic [ref=e799]: 
+                      - generic [ref=e800]:
+                        - text: (14
+                        - generic [ref=e801]: total ratings
+                        - text: )
+                    - paragraph [ref=e803]: Create animated gallery walls with image-switching effects. Display photos from Instagram, Flickr, or media uploads.
+                  - generic [ref=e804]:
+                    - generic [ref=e805]:
+                      - img [ref=e806]
+                      - generic [ref=e808]: A WP Life
+                    - generic [ref=e809]:
+                      - img [ref=e810]
+                      - generic [ref=e812]: 2,000+ active installations
+                    - generic [ref=e813]:
+                      - img [ref=e814]
+                      - generic [ref=e816]: Tested with 6.9.4
+              - listitem [ref=e817]:
+                - generic [ref=e818]:
+                  - generic [ref=e819]:
+                    - heading "Sticky Block for Gutenberg Editor" [level=3] [ref=e822]:
+                      - link "Sticky Block for Gutenberg Editor" [ref=e823]:
+                        - /url: https://wordpress.org/plugins/sticky-block/
+                    - generic [ref=e824]:
+                      - generic "4.5 out of 5 stars" [ref=e825]:
+                        - generic [ref=e826]: 
+                        - generic [ref=e827]: 
+                        - generic [ref=e828]: 
+                        - generic [ref=e829]: 
+                        - generic [ref=e830]: 
+                      - generic [ref=e831]:
+                        - text: (11
+                        - generic [ref=e832]: total ratings
+                        - text: )
+                    - paragraph [ref=e834]: The Gutenberg Sticky Block will stick at the top of the page once you scroll down.
+                  - generic [ref=e835]:
+                    - generic [ref=e836]:
+                      - img [ref=e837]
+                      - generic [ref=e839]: Senff – a11n
+                    - generic [ref=e840]:
+                      - img [ref=e841]
+                      - generic [ref=e843]: 7,000+ active installations
+                    - generic [ref=e844]:
+                      - img [ref=e845]
+                      - generic [ref=e847]: Tested with 6.9.4
+        - complementary [ref=e848]:
+          - generic [ref=e849]:
+            - heading "Add your plugin" [level=2] [ref=e850]
+            - generic [ref=e851]:
+              - text: The WordPress Plugin Directory is the largest directory of free and open source WordPress plugins. Find out how to
+              - link "host your plugin" [ref=e852] [cursor=pointer]:
+                - /url: https://wordpress.org/plugins/developers
+              - text: on WordPress.org.
+          - generic [ref=e853]:
+            - heading "Create a plugin" [level=2] [ref=e854]
+            - generic [ref=e855]:
+              - text: Building a plugin has never been easier. Read through the
+              - link "Plugin Developer Handbook" [ref=e856] [cursor=pointer]:
+                - /url: https://developer.wordpress.org/plugins/
+              - text: to learn all about WordPress plugin development.
+          - generic [ref=e857]:
+            - heading "Stay up-to-date" [level=2] [ref=e858]
+            - generic [ref=e859]:
+              - text: Plugin development is constantly changing with each new WordPress release. Keep up with the latest changes by following the
+              - link "Plugins Team’s blog" [ref=e860] [cursor=pointer]:
+                - /url: https://make.wordpress.org/plugins/
+              - text: .
+    - contentinfo [ref=e861]:
+      - navigation "Footer" [ref=e862]:
+        - list [ref=e863]:
+          - listitem [ref=e864]:
+            - link "About" [ref=e865] [cursor=pointer]:
+              - /url: https://wordpress.org/about/
+          - listitem [ref=e866]:
+            - link "News" [ref=e867] [cursor=pointer]:
+              - /url: https://wordpress.org/news/
+          - listitem [ref=e868]:
+            - link "Hosting" [ref=e869] [cursor=pointer]:
+              - /url: https://wordpress.org/hosting/
+          - listitem [ref=e870]:
+            - link "Privacy" [ref=e871] [cursor=pointer]:
+              - /url: https://wordpress.org/about/privacy/
+        - list [ref=e872]:
+          - listitem [ref=e873]:
+            - link "Showcase" [ref=e874] [cursor=pointer]:
+              - /url: https://wordpress.org/showcase/
+          - listitem [ref=e875]:
+            - link "Themes" [ref=e876] [cursor=pointer]:
+              - /url: https://wordpress.org/themes/
+          - listitem [ref=e877]:
+            - link "Plugins" [ref=e878] [cursor=pointer]:
+              - /url: https://wordpress.org/plugins/
+          - listitem [ref=e879]:
+            - link "Patterns" [ref=e880] [cursor=pointer]:
+              - /url: https://wordpress.org/patterns/
+        - list [ref=e881]:
+          - listitem [ref=e882]:
+            - link "Learn" [ref=e883] [cursor=pointer]:
+              - /url: https://learn.wordpress.org/
+          - listitem [ref=e884]:
+            - link "Documentation" [ref=e885] [cursor=pointer]:
+              - /url: https://wordpress.org/documentation/
+          - listitem [ref=e886]:
+            - link "Developers" [ref=e887] [cursor=pointer]:
+              - /url: https://developer.wordpress.org/
+          - listitem [ref=e888]:
+            - link "WordPress.tv" [ref=e889] [cursor=pointer]:
+              - /url: https://wordpress.tv/
+              - text: WordPress.tv ↗
+        - list [ref=e890]:
+          - listitem [ref=e891]:
+            - link "Get Involved" [ref=e892] [cursor=pointer]:
+              - /url: https://make.wordpress.org/
+          - listitem [ref=e893]:
+            - link "Events" [ref=e894] [cursor=pointer]:
+              - /url: https://events.wordpress.org/
+          - listitem [ref=e895]:
+            - link "Donate" [ref=e896] [cursor=pointer]:
+              - /url: https://wordpressfoundation.org/donate/
+              - text: Donate ↗
+          - listitem [ref=e897]:
+            - link "Five for the Future" [ref=e898] [cursor=pointer]:
+              - /url: https://wordpress.org/five-for-the-future/
+        - list [ref=e899]:
+          - listitem [ref=e900]:
+            - link "WordPress.com" [ref=e901] [cursor=pointer]:
+              - /url: https://wordpress.com/?ref=wporg-footer
+              - text: WordPress.com ↗
+          - listitem [ref=e902]:
+            - link "Matt" [ref=e903] [cursor=pointer]:
+              - /url: https://ma.tt/
+              - text: Matt ↗
+          - listitem [ref=e904]:
+            - link "bbPress" [ref=e905] [cursor=pointer]:
+              - /url: https://bbpress.org/
+              - text: bbPress ↗
+          - listitem [ref=e906]:
+            - link "BuddyPress" [ref=e907] [cursor=pointer]:
+              - /url: https://buddypress.org/
+              - text: BuddyPress ↗
+      - generic [ref=e908]:
+        - figure [ref=e910]:
+          - link "WordPress.org" [ref=e911] [cursor=pointer]:
+            - /url: https://wordpress.org/
+            - img "WordPress.org" [ref=e912]
+        - list [ref=e916]:
+          - listitem [ref=e917]:
+            - link "Visit our X (formerly Twitter) account" [ref=e918] [cursor=pointer]:
+              - /url: https://www.x.com/WordPress
+              - img [ref=e919]
+              - generic [ref=e921]: Visit our X (formerly Twitter) account
+          - listitem [ref=e922]:
+            - link "Visit our Bluesky account" [ref=e923] [cursor=pointer]:
+              - /url: https://bsky.app/profile/wordpress.org
+              - img [ref=e924]
+              - generic [ref=e926]: Visit our Bluesky account
+          - listitem [ref=e927]:
+            - link "Visit our Mastodon account" [ref=e928] [cursor=pointer]:
+              - /url: https://mastodon.world/@WordPress
+              - img [ref=e929]
+              - generic [ref=e931]: Visit our Mastodon account
+          - listitem [ref=e932]:
+            - link "Visit our Threads account" [ref=e933] [cursor=pointer]:
+              - /url: https://www.threads.net/@wordpress
+              - img [ref=e934]
+              - generic [ref=e936]: Visit our Threads account
+          - listitem [ref=e937]:
+            - link "Visit our Facebook page" [ref=e938] [cursor=pointer]:
+              - /url: https://www.facebook.com/WordPress/
+              - img [ref=e939]
+              - generic [ref=e941]: Visit our Facebook page
+          - listitem [ref=e942]:
+            - link "Visit our Instagram account" [ref=e943] [cursor=pointer]:
+              - /url: https://www.instagram.com/wordpress/
+              - img [ref=e944]
+              - generic [ref=e946]: Visit our Instagram account
+          - listitem [ref=e947]:
+            - link "Visit our LinkedIn account" [ref=e948] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/wordpress
+              - img [ref=e949]
+              - generic [ref=e951]: Visit our LinkedIn account
+          - listitem [ref=e952]:
+            - link "Visit our TikTok account" [ref=e953] [cursor=pointer]:
+              - /url: https://www.tiktok.com/@wordpress
+              - img [ref=e954]
+              - generic [ref=e956]: Visit our TikTok account
+          - listitem [ref=e957]:
+            - link "Visit our YouTube channel" [ref=e958] [cursor=pointer]:
+              - /url: https://www.youtube.com/wordpress
+              - img [ref=e959]
+              - generic [ref=e961]: Visit our YouTube channel
+          - listitem [ref=e962]:
+            - link "Visit our Tumblr account" [ref=e963] [cursor=pointer]:
+              - /url: https://wordpress.tumblr.com/
+              - img [ref=e964]
+              - generic [ref=e966]: Visit our Tumblr account
+        - figure:
+          - img "Code is Poetry" [ref=e967]
+      - text: The WordPress® trademark is the intellectual property of the WordPress Foundation.
