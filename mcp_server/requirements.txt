@@ -9,3 +9,7 @@ google-auth-oauthlib>=1.2.1
 python-dotenv>=1.0.1
 keyring>=25.2.1
 truststore>=0.9.1
+
+# seo-growth-hacker Skill: scripts/fetch_serp.py 用
+httpx>=0.27.0
+selectolax>=0.3.21
