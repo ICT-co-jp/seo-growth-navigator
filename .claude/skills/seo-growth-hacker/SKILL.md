@@ -62,6 +62,7 @@ GA4 / GSC データを唯一の根拠として、SEO 改善機会の発見から
 
 | ファイル | 内容 |
 | --- | --- |
+| [USAGE.md](USAGE.md) | **人間向け Quick Start**(初回セットアップ・実行例・トラブルシューティング) |
 | [references/sop.md](references/sop.md) | 各工程の詳細な実行手順とテンプレート |
 | [references/data-integrity.md](references/data-integrity.md) | 数値捏造禁止の運用ルール |
 | [references/serp-fallback.md](references/serp-fallback.md) | `fetch_serp.py` 失敗時のフォールバック手順 |
