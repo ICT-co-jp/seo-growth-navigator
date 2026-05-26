@@ -27,8 +27,22 @@ mcp_server/.venv/Scripts/python mcp_server/scripts/fetch_serp.py \
 | `--keyword` | ○ | 検索キーワード(UTF-8) |
 | `--top-n` | × | 上位 N 件(既定: 8、上限: 10) |
 | `--out` | ○ | JSON 出力先 (`.seo/runs/{run_id}/03-serp.json`) |
-| `--user-agent` | × | UA 上書き(既定: Bot UA を明示) |
+| `--engine` | × | SERP 取得経路 (`http` / `playwright`、既定: `http`) |
+| `--headed` | × | Playwright を可視モードで起動(`--engine playwright` 時のフォールバック) |
+| `--user-agent` | × | UA 上書き。未指定時は engine ごとの既定 (http→Bot UA / playwright→実 Chrome 偽装) |
 | `--timeout` | × | URLごとのHTTPタイムアウト秒(既定: 15) |
+
+### `--engine playwright` の挙動
+
+`--engine http` で `results[]` が空になる(Google bot 検知)場合のフォールバック経路。
+
+- **実 Chrome を駆動**: `channel="chrome"` でシステムインストール済みの本物 Chrome を起動。
+  Playwright 既定の chrome-headless-shell では TLS/HTTP2 指紋が異なり Google にブロックされやすいため。
+- **ホーム → 検索の動線**: いきなり `/search?q=...` を叩かず、まず `https://www.google.com/` を踏んで
+  クッキー (NID/CONSENT/1P_JAR) を獲得してから検索に遷移する。これで `/sorry/` リダイレクトを回避。
+- **stealth init script**: `navigator.webdriver` / `cdc_*` / `plugins` / `languages` などヘッドレス痕跡を上書き。
+- **依存**: `mcp_server/.venv` に `playwright` がインストール済みで、`playwright install chrome` 済みであること。
+- **失敗時**: それでも `/sorry/` に飛ばされる場合は `--headed` を付けて可視モードで再試行する。
 
 ### 期待される出力 JSON スキーマ
 

@@ -28,7 +28,9 @@ argument-hint: "[--top-n 8] [--run <run_id>]"
      --out .seo/runs/{run_id}/03-serp.json
    ```
    - **`WebFetch` / `browser_*` を Claude から直接呼ばない**(`serp-fallback.md` 参照)
-   - 失敗時は stderr を見せて停止。代替経路に逃げない
+   - `results[]` が空(Google bot 検知)なら `--engine playwright` を付けて再実行する。
+     さらに失敗時は `--headed` を追加(実 Chrome 可視モード)。詳細は [serp-fallback.md](../../skills/seo-growth-hacker/references/serp-fallback.md)
+   - それ以外の失敗時は stderr を見せて停止。代替経路に逃げない
 
 3. **`03-serp.json` を Read してチェック**
    - `blocked_count > 0` の URL は分析対象から除外し、`run.json.warnings[]` に記録
