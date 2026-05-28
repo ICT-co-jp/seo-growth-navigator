@@ -1,4 +1,4 @@
-# seo-growth-hacker Skill — 使い方ガイド(人間向け Quick Start)
+﻿# seo-growth-navigator Skill — 使い方ガイド(人間向け Quick Start)
 
 GA4 / GSC データを根拠に SEO 改善機会を発見し、競合SERPを取得して、記事ドラフトを生成するまでを **1工程=1コマンド** で段階実行する Skill です。
 

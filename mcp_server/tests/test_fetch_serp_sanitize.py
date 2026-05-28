@@ -1,7 +1,7 @@
-"""fetch_serp.py のサニタイズ層 (信頼境界レイヤー2) の最小限ユニットテスト。
+﻿"""fetch_serp.py のサニタイズ層 (信頼境界レイヤー2) の最小限ユニットテスト。
 
 pytest が無くても `python mcp_server/tests/test_fetch_serp_sanitize.py` 直叩きで動く。
-詳細仕様は .claude/skills/seo-growth-hacker/references/security-model.md を参照。
+詳細仕様は .claude/skills/seo-growth-navigator/references/security-model.md を参照。
 """
 from __future__ import annotations
 

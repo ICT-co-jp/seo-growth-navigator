@@ -1,7 +1,13 @@
 ﻿---
-description: ターゲットKWのSERP上位を fetch_serp.py 経由で取得し、共通トピックを要約する
-argument-hint: "[--top-n 8] [--run <run_id>]"
+name: "source-command-seo-analyze-serp"
+description: "ターゲットKWのSERP上位を fetch_serp.py 経由で取得し、共通トピックを要約する"
 ---
+
+# source-command-seo-analyze-serp
+
+Use this skill when the user asks to run the migrated source command `seo-analyze-serp`.
+
+## Command Template
 
 # /seo:analyze-serp — Step 3: 競合SERP取得
 
@@ -27,7 +33,7 @@ argument-hint: "[--top-n 8] [--run <run_id>]"
      --top-n 8 \
      --out .seo/runs/{run_id}/03-serp.json
    ```
-   - **`WebFetch` / `browser_*` を Claude から直接呼ばない**(`serp-fallback.md` 参照)
+   - **`WebFetch` / `browser_*` を Codex から直接呼ばない**(`serp-fallback.md` 参照)
    - `results[]` が空(Google bot 検知)なら `--engine playwright` を付けて再実行する。
      さらに失敗時は `--headed` を追加(実 Chrome 可視モード)。詳細は [serp-fallback.md](../../skills/seo-growth-navigator/references/serp-fallback.md)
    - それ以外の失敗時は stderr を見せて停止。代替経路に逃げない

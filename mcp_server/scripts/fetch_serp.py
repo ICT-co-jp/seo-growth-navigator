@@ -1,5 +1,5 @@
-"""
-fetch_serp.py — seo-growth-hacker Skill の唯一の外部 Web 取得経路
+﻿"""
+fetch_serp.py — seo-growth-navigator Skill の唯一の外部 Web 取得経路
 
 設計:
 - Claude 側に HTML/DOM を**渡さない**。本ファイル内で fetch → 抽出 → サニタイズまで完結し、
@@ -13,8 +13,8 @@ fetch_serp.py — seo-growth-hacker Skill の唯一の外部 Web 取得経路
 - どの経路でも HTML→URL 抽出関数と sanitize_text() を共用し、信頼境界を一本化。
 
 詳細仕様:
-- .claude/skills/seo-growth-hacker/references/serp-fallback.md (CLI/JSONスキーマ)
-- .claude/skills/seo-growth-hacker/references/security-model.md (サニタイズ層)
+- .claude/skills/seo-growth-navigator/references/serp-fallback.md (CLI/JSONスキーマ)
+- .claude/skills/seo-growth-navigator/references/security-model.md (サニタイズ層)
 """
 
 from __future__ import annotations
@@ -426,7 +426,7 @@ def fetch_page_headings(
 
 # --- メイン ---------------------------------------------------------------------
 
-_DEFAULT_HTTP_UA = "ictGrowthHacker-SerpFetcher/1.0 (+seo-growth-hacker Skill; respects robots; contact via repo)"
+_DEFAULT_HTTP_UA = "ictGrowthHacker-SerpFetcher/1.0 (+seo-growth-navigator Skill; respects robots; contact via repo)"
 # Playwright 経路で Bot UA を使うと Google にブロックされるため、実 Chrome を偽装する。
 # 用途は Google SERP の bot 検知回避に限定(本文ページ取得には使わない)。
 # 複数 UA をローテーションして単一指紋検知を避ける(searchRankRecorder の手法を踏襲)。
@@ -583,7 +583,7 @@ def _infer_run_id(out_path: Path) -> str | None:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
-        description="SERP 取得 + サニタイズ済み H2/H3 抽出 (seo-growth-hacker Skill 用)"
+        description="SERP 取得 + サニタイズ済み H2/H3 抽出 (seo-growth-navigator Skill 用)"
     )
     parser.add_argument("--keyword", required=True, help="検索キーワード(UTF-8)")
     parser.add_argument("--top-n", type=int, default=8, help="上位 N 件(既定 8、上限 10)")

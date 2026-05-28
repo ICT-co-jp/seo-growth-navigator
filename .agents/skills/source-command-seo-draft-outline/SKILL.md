@@ -1,7 +1,13 @@
 ﻿---
-description: SERP要約と検索意図から「勝てる構成案」を作成する
-argument-hint: "[--run <run_id>]"
+name: "source-command-seo-draft-outline"
+description: "SERP要約と検索意図から「勝てる構成案」を作成する"
 ---
+
+# source-command-seo-draft-outline
+
+Use this skill when the user asks to run the migrated source command `seo-draft-outline`.
+
+## Command Template
 
 # /seo:draft-outline — Step 4: 構成案作成
 

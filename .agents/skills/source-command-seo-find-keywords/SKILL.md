@@ -1,7 +1,13 @@
 ﻿---
-description: GA4/GSCデータから「お宝KW」候補を1〜3件抽出し、新しい run を開始する
-argument-hint: "[slug] [--start YYYY-MM-DD --end YYYY-MM-DD]"
+name: "source-command-seo-find-keywords"
+description: "GA4/GSCデータから「お宝KW」候補を1〜3件抽出し、新しい run を開始する"
 ---
+
+# source-command-seo-find-keywords
+
+Use this skill when the user asks to run the migrated source command `seo-find-keywords`.
+
+## Command Template
 
 # /seo:find-keywords — Step 1: お宝KW抽出
 

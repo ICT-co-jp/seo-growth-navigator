@@ -1,7 +1,13 @@
 ﻿---
-description: 全H2ドラフトを統合し、CMS貼付用の最終Markdown(frontmatter付き)を生成する
-argument-hint: "[--run <run_id>]"
+name: "source-command-seo-assemble"
+description: "全H2ドラフトを統合し、CMS貼付用の最終Markdown(frontmatter付き)を生成する"
 ---
+
+# source-command-seo-assemble
+
+Use this skill when the user asks to run the migrated source command `seo-assemble`.
+
+## Command Template
 
 # /seo:assemble — Step 6: 最終統合
 

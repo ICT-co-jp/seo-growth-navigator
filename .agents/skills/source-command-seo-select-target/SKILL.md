@@ -1,7 +1,13 @@
 ﻿---
-description: 候補一覧から1件を選択して対象を確定する
-argument-hint: "<候補番号> [--run <run_id>]"
+name: "source-command-seo-select-target"
+description: "候補一覧から1件を選択して対象を確定する"
 ---
+
+# source-command-seo-select-target
+
+Use this skill when the user asks to run the migrated source command `seo-select-target`.
+
+## Command Template
 
 # /seo:select-target — Step 2: 対象決定
 

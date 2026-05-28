@@ -1,4 +1,4 @@
-mcp_server/.venv/
+﻿mcp_server/.venv/
 mcp_server/.env
 agents/.env
 data/logs/*.log
@@ -6,5 +6,5 @@ __pycache__/
 *.py[cod]
 *.egg-info/
 
-# seo-growth-hacker Skill: 各 run の中間成果物
+# seo-growth-navigator Skill: 各 run の中間成果物
 .seo/runs/

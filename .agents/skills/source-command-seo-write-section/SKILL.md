@@ -1,7 +1,13 @@
 ﻿---
-description: H2セクションを執筆して保存する。引数なしで残り全H2を並列執筆、<h2-id>指定で単体執筆
-argument-hint: "[<h2-id>] [--run <run_id>]"
+name: "source-command-seo-write-section"
+description: "H2セクションを執筆して保存する。引数なしで残り全H2を並列執筆、<h2-id>指定で単体執筆"
 ---
+
+# source-command-seo-write-section
+
+Use this skill when the user asks to run the migrated source command `seo-write-section`.
+
+## Command Template
 
 # /seo:write-section — Step 5: H2執筆(単体 or 並列)
 

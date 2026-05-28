@@ -1,9 +1,9 @@
----
-name: seo-growth-hacker
+﻿---
+name: seo-growth-navigator
 description: Use when the user wants to discover SEO improvement opportunities (お宝キーワード, 改善対象ページ) from GA4/GSC data, analyze competitor SERPs, or draft data-grounded SEO articles. Coordinates the /seo:* slash command pipeline. All numbers must come from MCP tools (no fabrication). Each step writes artifacts under .seo/runs/{run_id}/ for resumability.
 ---
 
-# seo-growth-hacker Skill
+# seo-growth-navigator Skill
 
 GA4 / GSC データを唯一の根拠として、SEO 改善機会の発見から記事ドラフト生成までを「**1工程=1コマンド**」で段階実行する Skill です。
 
