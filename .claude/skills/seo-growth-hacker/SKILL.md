@@ -46,8 +46,10 @@ GA4 / GSC データを唯一の根拠として、SEO 改善機会の発見から
        ↓ fetch_serp.py 1発で 03-serp.json を生成
 [4] 構成案作成     → /seo:draft-outline
        ↓ 04-outline.md 作成
-[5] H2単位執筆     → /seo:write-section <h2-id>
-       ↓ 05-drafts/h2-NN.md 作成(複数回繰り返し)
+[5] H2執筆         → /seo:write-section [<h2-id>]
+       ↓ 引数なし: 全H2を「H2-01直列→残り並列」で一括執筆
+       ↓ <h2-id>指定: 1つのH2だけ単体実行(差し戻し用)
+       ↓ 05-drafts/h2-NN.md を生成
 [6] 最終統合       → /seo:assemble
        ↓ 06-final.md 作成(CMS貼付用)
 ```
@@ -62,6 +64,7 @@ GA4 / GSC データを唯一の根拠として、SEO 改善機会の発見から
 | ------------------------------------------------------------ | -------------------------------------------------------------------------- |
 | [USAGE.md](USAGE.md)                                         | **人間向け Quick Start**(初回セットアップ・実行例・トラブルシューティング) |
 | [references/sop.md](references/sop.md)                       | 各工程の詳細な実行手順とテンプレート                                       |
+| [references/writing-style.md](references/writing-style.md)   | Step 5 共通の執筆スタイル(語尾・PREP法・表/箇条書きの使い分け 等)        |
 | [references/data-integrity.md](references/data-integrity.md) | 数値捏造禁止の運用ルール                                                   |
 | [references/serp-fallback.md](references/serp-fallback.md)   | `fetch_serp.py` 失敗時のフォールバック手順                                 |
 | [references/run-layout.md](references/run-layout.md)         | `.seo/runs/` のディレクトリ規約と run.json スキーマ                        |

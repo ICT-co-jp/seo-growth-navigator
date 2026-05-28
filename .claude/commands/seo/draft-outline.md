@@ -54,7 +54,7 @@ argument-hint: "[--run <run_id>]"
 ## 出力
 
 - ファイル: `.seo/runs/{run_id}/04-outline.md`, `run.json`
-- チャット: H2 リストと「次は `/seo:write-section h2-01` から順に実行してください」
+- チャット: H2 リストと「次は `/seo:write-section`(引数なし)で全H2を一括並列執筆できます。1個ずつ書く場合は `/seo:write-section h2-01` から順に実行してください」
 
 ## 守ること
 
