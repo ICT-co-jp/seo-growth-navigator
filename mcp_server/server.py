@@ -23,6 +23,7 @@ import truststore
 truststore.inject_into_ssl()
 from datetime import date, timedelta
 from typing import Any, Optional
+from urllib.parse import quote
 
 from dotenv import load_dotenv
 
@@ -30,7 +31,7 @@ _HERE = os.path.dirname(os.path.abspath(__file__))
 load_dotenv(os.path.join(_HERE, ".env"))
 
 from google.oauth2.credentials import Credentials
-from google.auth.transport.requests import Request
+from google.auth.transport.requests import AuthorizedSession, Request
 from google.analytics.data_v1beta import BetaAnalyticsDataClient
 from google.analytics.data_v1beta.types import (
     RunReportRequest,
@@ -39,7 +40,6 @@ from google.analytics.data_v1beta.types import (
     Metric,
     OrderBy,
 )
-from googleapiclient.discovery import build
 
 from mcp.server.fastmcp import FastMCP
 
@@ -68,7 +68,7 @@ SCOPES = [
 
 _credentials: Optional[Credentials] = None
 _ga4_client: Optional[BetaAnalyticsDataClient] = None
-_gsc_service = None
+_gsc_session: Optional[AuthorizedSession] = None
 
 
 def _load_credentials() -> Credentials:
@@ -117,15 +117,13 @@ def _ga4() -> BetaAnalyticsDataClient:
     return _ga4_client
 
 
-def _gsc():
-    global _gsc_service
-    if _gsc_service is None:
+def _gsc() -> AuthorizedSession:
+    global _gsc_session
+    if _gsc_session is None:
         if not GSC_SITE_URL:
             raise RuntimeError("GSC_SITE_URL が設定されていません。")
-        _gsc_service = build(
-            "searchconsole", "v1", credentials=_creds(), cache_discovery=False
-        )
-    return _gsc_service
+        _gsc_session = AuthorizedSession(_creds())
+    return _gsc_session
 
 
 def _default_range(days: int = 28) -> tuple[str, str]:
@@ -279,8 +277,22 @@ def ga4_returning_users(
 
 def _gsc_query(body: dict[str, Any]) -> dict[str, Any]:
     log.debug("GSC query: %s", body)
-    resp = _gsc().searchanalytics().query(siteUrl=GSC_SITE_URL, body=body).execute()
-    rows = resp.get("rows", [])
+    site_url = quote(GSC_SITE_URL, safe="")
+    url = (
+        "https://searchconsole.googleapis.com/webmasters/v3/sites/"
+        f"{site_url}/searchAnalytics/query"
+    )
+    resp = _gsc().post(url, json=body, timeout=30)
+    try:
+        resp.raise_for_status()
+    except Exception as ex:
+        detail = getattr(resp, "text", "")
+        raise RuntimeError(
+            f"GSC Search Analytics API request failed: {resp.status_code} {detail}"
+        ) from ex
+
+    payload = resp.json()
+    rows = payload.get("rows", [])
     out = []
     keys = body.get("dimensions", [])
     for r in rows:

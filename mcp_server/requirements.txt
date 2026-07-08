@@ -1,18 +1,19 @@
-﻿# MCPサーバ依存パッケージ
+﻿# MCPサーバ依存パッケージ (直接依存のみ)
 # Python 3.11+ 推奨
-mcp[cli]>=1.2.0
-google-analytics-data>=0.18.0
-google-api-python-client>=2.130.0
-google-auth>=2.30.0
-google-auth-httplib2>=0.2.0
-google-auth-oauthlib>=1.2.1
-python-dotenv>=1.0.1
-keyring>=25.2.1
-truststore>=0.9.1
+# 起動スクリプトは requirements.lock を使います。
+# 依存更新時はここを変更し、動作確認後に requirements.lock も更新してください。
+mcp[cli]==1.27.0
+google-analytics-data==0.21.0
+google-auth[requests]==2.49.2
+google-auth-oauthlib==1.3.1
+python-dotenv==1.2.2
+keyring==25.7.0
+truststore==0.10.4
+requests==2.33.1
 
 # seo-growth-navigator Skill: scripts/fetch_serp.py 用
-httpx>=0.27.0
-selectolax>=0.3.21
+httpx==0.28.1
+selectolax==0.4.9
 # Google SERP の bot 検知回避 (--engine playwright)。インストール後は
 # `python -m playwright install chromium` でブラウザバイナリを取得すること。
-playwright>=1.47.0
+playwright==1.60.0

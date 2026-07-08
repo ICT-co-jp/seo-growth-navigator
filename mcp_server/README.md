@@ -84,7 +84,7 @@ copy .env.example .env
 > ⚠ **重要**: `client_secret_xxx.json` の中身や OAuth リフレッシュトークンを `.env` に**書いてはいけません**。
 > これらは次の手順で keyring に直接取り込みます。
 
-### 3. .venv 構築と依存パッケージのインストール
+### 3. .venv 構築とロック済み依存パッケージのインストール
 
 Windows:
 
@@ -98,7 +98,8 @@ mac/Linux:
 ./run_server.sh
 ```
 
-初回起動時に `.venv` 作成→`pip install`→サーバ起動 が走ります。
+初回起動時に `.venv` 作成→`requirements.lock` から固定版をインストール→サーバ起動 が走ります。
+以後は `requirements.lock` の SHA-256 が変わった時だけ再インストールします。
 このタイミングでは keyring に何も入っていないので **エラーで落ちますが正常です**(次の手順で解決)。
 `Ctrl+C` でいったん終了してください。
 
@@ -256,7 +257,8 @@ mcp_server/
 ├── sitemap_to_csv.py    補助: サイトマップから URL一覧 CSV を生成
 ├── run_server.bat       Windows起動スクリプト（.venv構築 + 起動）
 ├── run_server.sh        mac/Linux起動スクリプト
-├── requirements.txt     依存パッケージ
+├── requirements.txt     直接依存パッケージ（固定版）
+├── requirements.lock    起動時に使うロック済み依存パッケージ
 ├── .env.example         .env のサンプル
 └── .env                 識別子のみ。secret は書かない。gitignore済
 ```
