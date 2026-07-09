@@ -76,14 +76,14 @@ GA4 / GSC データを唯一の根拠として、SEO 改善機会の発見から
 
 | 目的                    | 実関数                                           | 主な引数                                          |
 | ----------------------- | ------------------------------------------------ | ------------------------------------------------- |
-| 順位 4〜15 位の浮上候補 | `mcp__wpsecurity-analytics__gsc_position_window` | `min_position`, `max_position`, `min_impressions` |
-| 表示多いがCTR低い候補   | `mcp__wpsecurity-analytics__gsc_low_ctr_pages`   | `min_impressions`, `max_ctr`                      |
-| ランディングページ別CV  | `mcp__wpsecurity-analytics__ga4_landing_pages`   | `start_date`, `end_date`, `limit`                 |
-| URL別のクエリCTR/順位   | `mcp__wpsecurity-analytics__gsc_page_queries`    | `page`, `start_date`, `end_date`                  |
-| クリック上位クエリ      | `mcp__wpsecurity-analytics__gsc_top_queries`     | `limit`                                           |
-| PV上位ページ            | `mcp__wpsecurity-analytics__ga4_top_pages`       | `limit`                                           |
-| 流入チャネル            | `mcp__wpsecurity-analytics__ga4_traffic_sources` | -                                                 |
-| 接続確認                | `mcp__wpsecurity-analytics__health_check`        | -                                                 |
+| 順位 4〜15 位の浮上候補 | `mcp__ictgrowthhacker-analytics__gsc_position_window` | `min_position`, `max_position`, `min_impressions` |
+| 表示多いがCTR低い候補   | `mcp__ictgrowthhacker-analytics__gsc_low_ctr_pages`   | `min_impressions`, `max_ctr`                      |
+| ランディングページ別CV  | `mcp__ictgrowthhacker-analytics__ga4_landing_pages`   | `start_date`, `end_date`, `limit`                 |
+| URL別のクエリCTR/順位   | `mcp__ictgrowthhacker-analytics__gsc_page_queries`    | `page`, `start_date`, `end_date`                  |
+| クリック上位クエリ      | `mcp__ictgrowthhacker-analytics__gsc_top_queries`     | `limit`                                           |
+| PV上位ページ            | `mcp__ictgrowthhacker-analytics__ga4_top_pages`       | `limit`                                           |
+| 流入チャネル            | `mcp__ictgrowthhacker-analytics__ga4_traffic_sources` | -                                                 |
+| 接続確認                | `mcp__ictgrowthhacker-analytics__health_check`        | -                                                 |
 
 > 期間未指定時は直近28日が既定値。
 

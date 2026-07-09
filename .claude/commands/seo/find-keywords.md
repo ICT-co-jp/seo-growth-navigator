@@ -17,7 +17,7 @@ argument-hint: "[slug] [--start YYYY-MM-DD --end YYYY-MM-DD]"
 ## 実行手順 (要点)
 
 1. **前提チェック**
-   - `mcp__wpsecurity-analytics__health_check` を呼び、`ga4_ok: true, gsc_ok: true` を確認。失敗なら停止しユーザー報告。
+   - `mcp__ictgrowthhacker-analytics__health_check` を呼び、`ga4_ok: true, gsc_ok: true` を確認。失敗なら停止しユーザー報告。
 
 2. **run_id 発行 & 初期化**
    - 形式: `{YYYYMMDD-HHMM}-{slug}` (slug 省略時は `auto`)

@@ -28,7 +28,7 @@ Use this skill when the user asks to run the migrated source command `seo-select
    - 候補番号が `candidates[]` の範囲内か検証
 
 2. **必要に応じてクエリ詳細を追加取得**
-   - `mcp__wpsecurity-analytics__gsc_page_queries` (`page=<選択URL>`)
+   - `mcp__ictgrowthhacker-analytics__gsc_page_queries` (`page=<選択URL>`)
    - サブKW候補(impressions / ctr / position 実数付き)を抽出
 
 3. **`02-selection.md` 出力**

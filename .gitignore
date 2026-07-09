@@ -5,6 +5,7 @@ data/logs/*.log
 __pycache__/
 *.py[cod]
 *.egg-info/
+drafts/*
 
 # seo-growth-navigator Skill: 各 run の中間成果物
 .seo/runs/

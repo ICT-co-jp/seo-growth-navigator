@@ -32,9 +32,9 @@ GA4/GSCの実数からインパクトの大きい改善候補 URL × 想定KWを
    - ユーザー指定があれば `start_date` / `end_date` を上書き。
 
 3. **データ取得 (並列実行可)**
-   - `mcp__wpsecurity-analytics__gsc_position_window` (`min_position=4, max_position=15, min_impressions=200`)
-   - `mcp__wpsecurity-analytics__gsc_low_ctr_pages` (`min_impressions=500, max_ctr=0.02`)
-   - `mcp__wpsecurity-analytics__ga4_landing_pages` (`limit=50`)
+   - `mcp__ictgrowthhacker-analytics__gsc_position_window` (`min_position=4, max_position=15, min_impressions=200`)
+   - `mcp__ictgrowthhacker-analytics__gsc_low_ctr_pages` (`min_impressions=500, max_ctr=0.02`)
+   - `mcp__ictgrowthhacker-analytics__ga4_landing_pages` (`limit=50`)
    - いずれかが空配列の場合も「(該当データなし)」と明記して続行。
 
 4. **URL名寄せ**
@@ -88,7 +88,7 @@ GA4/GSCの実数からインパクトの大きい改善候補 URL × 想定KWを
 1. `01-candidates.md` と `run.json` を読み込む。
 2. 引数 `<候補番号>` が `candidates[]` の範囲内か検証。範囲外なら停止してエラー報告。
 3. 選択した候補に対し、必要なら **クエリレベル詳細** を追加取得:
-   - `mcp__wpsecurity-analytics__gsc_page_queries` (`page=<選択URL>`)
+   - `mcp__ictgrowthhacker-analytics__gsc_page_queries` (`page=<選択URL>`)
 4. `02-selection.md` を生成:
 
    ```markdown
@@ -252,7 +252,7 @@ pending リストから `h2-01` を除いた全 H2 を、`Agent` ツールで**1
 - **出力先**: `.seo/runs/{run_id}/05-drafts/{h2-id}.md` を Write すること
 - **禁止事項**(明確に列挙):
   - `run.json` を変更しない
-  - MCP ツール(`mcp__wpsecurity-analytics__*` 等)を呼ばない
+  - MCP ツール(`mcp__ictgrowthhacker-analytics__*` 等)を呼ばない
   - `fetch_serp.py` を実行しない
   - ネットワーク取得を行わない
   - 他の H2 を書かない、見出しに触れない

@@ -98,7 +98,7 @@
 - 自分が担当する **1 つの H2 だけ** を書く。他 H2 の見出しや内容に触れない。
 - 出力先は `.seo/runs/{run_id}/05-drafts/{h2-id}.md` のみ。
 - `run.json` を書き換えない。
-- MCP ツール(`mcp__wpsecurity-analytics__*` 等)を呼ばない。
+- MCP ツール(`mcp__ictgrowthhacker-analytics__*` 等)を呼ばない。
 - `fetch_serp.py` を実行しない。
 - ネットワーク取得を行わない。
 - 親から渡された **文体見本(H2-01 の本文)** に語尾とトーンを揃える。
